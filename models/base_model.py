@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+import models
 
 """This module defines the Base Model class"""
 
@@ -36,5 +37,5 @@ class BaseModel:
         new_dictionary = self.__dict__.copy()
         new_dictionary.update({'__class__': str(self.__class__.__name__)})
         new_dictionary["created_at"] = self.created_at.isoformat()
-        new_dictionary["updated_at"] = self.updated_at.isoformat()
+        nei_dictionary["updated_at"] = self.updated_at.isoformat()
         return new_dictionary
